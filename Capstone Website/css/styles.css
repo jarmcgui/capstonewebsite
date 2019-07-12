@@ -113,6 +113,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   height: 100%;
+  margin: 0 auto;
 }
 
 /*
@@ -165,9 +166,13 @@ table.index tr:nth-child(even) {background: url('../images/texture3.png');} */
 
 /* Typography */
 
-li,th,h2, section{
+li,th,h2,h1, {
     font-family: 'Playfair Display', serif;
 
+}
+
+h1 {
+  font-size: 40px;
 }
 
 
@@ -179,38 +184,86 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: lightgray;
 
-  background-color: #FEFFF1;
-  margin-right: 20%;
-  margin-left: 20%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 
-}
-ul {
-  padding: 5px;
-}
-li {
-  line-height: 1.5em;
-  border-bottom: 1px;
-  border-right: 2px;
 
 }
+.menu-h1 {
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 0;
+  font-size: 40px;
+
+
+}
+.menu-h1:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  margin-left: -40px;
+  left: 50%;
+  bottom: 0px;
+  background-color: black;
+
+
+}
+
+main table td {
+  font-size: 20px;
+}
+
+.drinks h1 {
+
+  background: #262626;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 30;
+}
+.breakfast h1 {
+
+  background: #262626;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 30;
+}
+.baked h1 {
+
+  background: #262626;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 30;
+}
+.drinks tr:hover, .breakfast tr:hover, .baked tr:hover {
+  background: #fff;
+}
+
 .drinks, .baked, .breakfast {
 
   align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  border: solid black;
 
 }
 
 main table {
-  width: 450px
-  margin-right: 1%;
-  margin-left: 1%;
+  width: 100%;
 
   align-items: center;
 }
 
- table h1 {
+main table h1 {
   align-items: : center;
 }
 
@@ -225,7 +278,7 @@ main table {
 /* About */
 
 .about-me {
-  background-color: #fff;
+  background-color: lightgray;
   width: 100%;
   height: 100%;
   padding-left: 33%;
@@ -242,6 +295,7 @@ main table {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-top: 0;
+  font-size: 40px;
 
 }
 .about-me h2:after {
@@ -257,8 +311,170 @@ main table {
 
 }
 
+/*Events*/
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: lightgray;
+  background size: cover;
+}
+
+section .leftbox {
+  width: 50%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
 
 
+
+}
+
+section .leftbox .content {
+  color: black;
+  background: transparent;
+  transition: .5s;
+
+  margin: 15px;
+
+}
+
+section .leftbox .content:hover {
+  background: white;
+
+}
+
+section .leftbox h1 {
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 0;
+
+}
+section .leftbox h1:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  margin-left: -40px;
+  left: 50%;
+  bottom: 0px;
+  background-color: black;
+
+}
+
+section .leftbox .content p {
+  margin: 20px;
+  padding: 10px;
+
+}
+
+section .events {
+
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  float: right;
+  box-sizing: border-box;
+}
+
+section .events ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+section .events ul li {
+  list-style: none;
+  background: #fff;
+  box-sizing: border-box;
+  height: 200px;
+  margin: 15px 0;
+
+}
+
+section .events ul li .time {
+  position: relative;
+  padding: 20px;
+  background: #262626;
+  box-sizing: border-box;
+  width: 30%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  transition: .5s;
+
+}
+section .events ul li:hover .time {
+  background: #4CAF50;
+}
+section .events ul li .time h2 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 60px;
+  line-height: 30px;
+}
+
+section .events ul li .time h2 span {
+  font-size: 30px;
+
+}
+
+section .events ul li .details {
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+section .events ul li .details h3 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+
+}
+
+section .events ul li .details p {
+  position: relative;
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 16px;
+
+}
+
+section .events ul li .details a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid #262626;
+  margin-top: 15px;
+  font-size: 18px;
+  transition: .5s;
+
+}
+
+
+section .events ul li .details a:hover {
+  background: #4CAF50;
+  color: #fff;
+  border-color: #4CAF50;
+
+}
 
 
 /* Contact */
@@ -269,20 +485,21 @@ main table {
 }
 
 .contact {
-  background-color: rgba(0,255,0,.05);
 
   display: flex;
   justify-content: center;
   flex-flow: column;
-  margin-bottom: 20px;
+  margin: 20px;
+
 
 }
 .contact-info {
   text-align: center;
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  padding-top: 20px;
   padding-bottom: 20px;
-
 }
 
 
@@ -452,35 +669,25 @@ input[type=submit]:hover {
     height: 150px;
     position: relative;
 }
- footer::after {
+ footer:after {
    height: 100%;
    width: 100%;
    content: "";
    background: url("../images/footer.jpg");
    background-size: cover;
    background-position: center;
-   opacity: .8;
+   opacity: 1;
    z-index: -1;
    position: absolute;
  }
 
-footer .contact-footer {
-  width: 300px;
-  margin-top: 10px;
-}
+
+footer address, footer p {
 
 
-/* Center blocks in XS */
-footer section {
-  margin: 0 auto;
   color: white;
   text-align: center;
-}
-
-footer address {
-  margin-top: 45px;
-  color: white;
-  text-align: center;
+  font-size: 17px;
 }
 
 
@@ -493,24 +700,12 @@ footer address {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 400px) {
     /* body { background-color: orange; } */
-    .gallery .photo img {
-      width: 100%;
-      height: 30%;
-    }
-    .about-me .profile-picture {
-      width: 100%
-    }
-    .about-me .text {
-      width: 100%
-    }
+
+
     .rslides {
       height: 200px;
     }
-    .lashphoto {
-      width: 100%;
-      padding: 20px;
 
-    }
     .navigation li {font-size: 15px;}
 }
 
@@ -522,12 +717,7 @@ footer address {
       height: 30%;
 
     }
-    .about-me .profile-picture {
-      width: 45%
-    }
-    .about-me .text {
-      width: 45%
-    }
+
     .rslides {
       height: 300px;
     }
@@ -554,6 +744,36 @@ footer address {
     }
     .navigation li {font-size: 25px;}
 }
+
+    section {
+      height: 100%;
+      background-position: center;
+
+    }
+
+    section .leftbox {
+      width: 100%;
+      height: auto;
+      float: none;
+      padding: 20px;
+    }
+
+    section .events {
+
+      width: 100%;
+      height: auto;
+      background: transparent;
+      float: none;
+      box-sizing: border-box;
+    }
+      section .events ul {
+        position: relative;
+        transform: translateY(0px);
+        padding: 0 20px 20px;
+      }
+      section .leftbox .content {
+        padding: 20px;
+      }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {

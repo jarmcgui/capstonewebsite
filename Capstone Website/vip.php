@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -16,7 +15,6 @@
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Playfair+Display" rel="stylesheet">
 		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
 	</head>
@@ -36,29 +34,35 @@
 				<li><a href="news.html">News</a></li>
 				<li><a href="events.html">Events</a></li>
 				<li><a href="menu.html">Menu</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="Contact.html">Contact</a></li>
 			</ul>
 			</div>
 		</div>
 
-    <!-- Plugin -->
+		<!-- Plugin -->
 
-    <ul class="rslides">
-      <li><img src="images/coffee1.jpg" alt=""></li>
-    </ul>
+		<ul class="rslides">
+			<li><img src="images/coffee1.jpg" alt=""></li>
+			<li><img src="images/coffee2.jpg" alt=""></li>
+			<li><img src="images/coffee3.jpg" alt=""></li>
+		</ul>
 
-    <!-- mission -->
 
-    <div class="about-me">
-          <h2>Our Mission </h2>
-          <br>
-    			<p>We set out to create a destination on Bloomington’s historic Kirkwood Avenue that promotes lively discussion, blooming friendships, and worldwide benevolence through our premium coffee. Our coffee is not the endpoint of our mission; rather, it serves as a medium through which extraordinary things can be done by ordinary people who want to make our world a better place.</p>
-    </div>
+<!-- VIP LIST -->
 
+<ul>
+    <?php do {
+    ?>
+    <li><a href="viplist.php"><?php echo $rsUser["email"]; ?></a></li>
+    <?php
+    } while ($rsUser = mysql_fetch_assoc($user_query));
+    ?>
+</ul>
 
 
 
 <!-- Footer -->
+
 <footer>
 	<div class="contact">
 		<div class = "contact-info">
@@ -72,3 +76,16 @@
 		</div>
 	</div>
 </footer>
+<!-- JS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="responsiveslides.min.js"></script>
+<!-- Activation JS -->
+
+<script>
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
+</script>
+
+	</body>
+</html>

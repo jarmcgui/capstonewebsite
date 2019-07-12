@@ -49,22 +49,17 @@
 	</div>
 
 	<!-- Form -->
-	<form>
-	  <div class="container-newsletter">
-	    <h2>Subscribe to my Newsletter</h2>
-	  </div>
-
-	  <div class="container-newsletter" style="background-color:white">
-	    <input type="text" placeholder="Name" name="name" required>
-	    <input type="text" placeholder="Email address" name="mail" required>
-	    <label>
-	      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter>
-	    </label>
-	  </div>
-
-	  <div class="container-newsletter">
-	    <input type="submit" value="Subscribe">
-	  </div>
+	<form action="createuser.php" method="post" name="form" class="form-box">
+		<div class="container-newsletter">
+			<h2>Subscribe to VIP list</h2>
+		</div>
+		<div class="container-newsletter" style="background-color:white">
+		<label for="name">Name:</label><br>
+		<input type="text" name="name" class="inp" placeholder="" required><br>
+		<label for="email">Email:</label><br>
+		<input type="email" name="email" class="inp" placeholder="" required><br>
+		<input type="submit" name="submit" value="submit">
+	</div>
 	</form>
 
 
@@ -76,9 +71,10 @@
 
 
 <!-- Footer -->
+
 <footer>
 	<div class="contact">
-		<section>
+		<div class = "contact-info">
 			<address>
 				<strong>Jack's Coffee</strong><br>
 				3961 College Ave<br>
@@ -86,7 +82,7 @@
 			</address>
 			<p>317-255-3189</p>
 			<p><a href="mailto:JacksCoffee@sbcglobal.net">JacksCoffee@sbcglobal.net</a></p>
-		</section>
+		</div>
 	</div>
 </footer>
 <!-- JS -->
